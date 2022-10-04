@@ -1,0 +1,25 @@
+{
+    "name": "php-package-builder/php-package-builder",
+    "description": "A php package builder.",
+    "keywords": ["composer", "package", "php", "builder"],
+    "authors": [
+        {
+            "name": "Yi Wang",
+            "email": "wangyiicloud@icloud.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PPB\\PHPPackageBuilder\\": "src"
+        }
+    },
+    "require": {
+        "php":"^8.0",
+        "symfony/console": "^5.0.0",
+        "symfony/process": "^5.0.0",
+        "symfony/filesystem": "^5.0.0"
+    },
+    
+    "bin": ["bin/php-package-builder"],
+    "license": "MIT"
+}
