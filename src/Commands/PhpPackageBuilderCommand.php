@@ -41,7 +41,7 @@ class PHPPackageBuilderCommand extends Command {
   {
     $this
     ->setName('build')
-    ->setDescription('Build package')
+    ->setDescription('Build PHP Package')
     ->addArgument(
       'directory',
       InputArgument::OPTIONAL,
@@ -57,7 +57,7 @@ class PHPPackageBuilderCommand extends Command {
     
     $output->writeln('Enjoying your package!');
 
-    return 0;
+    return self::SUCCESS;
   }
 
   protected function getFileSystem()
@@ -161,8 +161,8 @@ class PHPPackageBuilderCommand extends Command {
 
   protected function setNamespace()
   {
-    $composerJson = $this->packageDirectory.'/composer.json';
-    $composer = \json_decode(\file_get_contents($composerJson));
+    $composerJsonFile = $this->packageDirectory.'/composer.json';
+    $composer = \json_decode(\file_get_contents($composerJsonFile));
 
     $composer->autoload = [
       'psr-4' => [
@@ -170,7 +170,7 @@ class PHPPackageBuilderCommand extends Command {
       ],
     ];
 
-    \file_put_contents($composerJson, \json_encode($composer, \JSON_PRETTY_PRINT|\JSON_UNESCAPED_UNICODE));
+    \file_put_contents($composerJsonFile, \json_encode($composer, \JSON_PRETTY_PRINT|\JSON_UNESCAPED_UNICODE));
 
     return $this;
   }
