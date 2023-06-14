@@ -21,5 +21,11 @@
     },
     
     "bin": ["bin/php-package-builder"],
-    "license": "MIT"
+    "license": "MIT",
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.16"
+    },
+    "scripts": {
+        "phpcs": "vendor/bin/php-cs-fixer fix --ansi",
+    }
 }
