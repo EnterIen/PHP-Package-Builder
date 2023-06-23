@@ -1,5 +1,5 @@
 {
-    "name": "php-package-builder/php-package-builder",
+    "name": "valcano/php-package-builder",
     "description": "A php package builder.",
     "keywords": ["composer", "package", "php", "builder"],
     "authors": [
@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "PPB\\PHPPackageBuilder\\": "src"
+            "Valcano\\Builder\\": "src"
         }
     },
     "require": {
@@ -26,6 +26,6 @@
         "friendsofphp/php-cs-fixer": "^3.16"
     },
     "scripts": {
-        "phpcs": "vendor/bin/php-cs-fixer fix --ansi",
+        "phpcs": "vendor/bin/php-cs-fixer fix --ansi"
     }
 }

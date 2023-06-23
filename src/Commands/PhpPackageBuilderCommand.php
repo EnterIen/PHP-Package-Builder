@@ -1,6 +1,6 @@
 <?php
 
-namespace PPB\PHPPackageBuilder\Commands;
+namespace Valcano\Builder\Commands;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -12,6 +12,7 @@ use Symfony\Component\Filesystem\Filesystem;
 
 class PHPPackageBuilderCommand extends Command
 {
+    protected $fileSystem = null;
     protected $gits = [];
     protected $packageInfo = [];
     protected $questions   = [];

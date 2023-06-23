@@ -5,9 +5,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace PPB\PHPPackageBuilder;
+namespace Valcano\Builder;
 
-use PPB\PHPPackageBuilder\Commands\PHPPackageBuilderCommand;
+use Valcano\Builder\Commands\PHPPackageBuilderCommand;
 
 use Symfony\Component\Console\Application as BasicApplication;
 
