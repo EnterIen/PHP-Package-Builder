@@ -185,6 +185,11 @@ class PHPPackageBuilderCommand extends Command
         return str_replace(' ', '', ucwords(str_replace(['-', '_'], ' ', $string)));
     }
 
+    protected function fixup(): void
+    {
+        exit('Try git fixup');
+    }
+
     /**
      * @param string $string
      *
