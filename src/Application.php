@@ -7,7 +7,7 @@
 
 namespace Valcano\Builder;
 
-use Valcano\Builder\Commands\PHPPackageBuilderCommand;
+use Valcano\Builder\Commands\PackageBuilderCommand;
 
 use Symfony\Component\Console\Application as BasicApplication;
 
@@ -17,16 +17,16 @@ use Symfony\Component\Console\Application as BasicApplication;
  */
 class Application extends BasicApplication
 {
-  /**
-   * Application constructor.
-   *
-   * @param string $name
-   * @param string $version
-   */
-  public function __construct($name, $version, $configs)
-  {
-    parent::__construct($name, $version);
+    /**
+     * Application constructor.
+     *
+     * @param string $name
+     * @param string $version
+     */
+    public function __construct($name, $version, $configs)
+    {
+        parent::__construct($name, $version);
 
-    $this->add(new PHPPackageBuilderCommand($configs));
-  }
+        $this->add(new PackageBuilderCommand($configs));
+    }
 }

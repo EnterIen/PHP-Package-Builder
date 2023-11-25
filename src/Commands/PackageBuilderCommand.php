@@ -10,7 +10,7 @@ use Symfony\Component\Console\Question\ConfirmationQuestion;
 use Symfony\Component\Console\Question\Question;
 use Symfony\Component\Filesystem\Filesystem;
 
-class PHPPackageBuilderCommand extends Command
+class PackageBuilderCommand extends Command
 {
     protected $fileSystem = null;
     protected $gits = [];
@@ -170,7 +170,7 @@ class PHPPackageBuilderCommand extends Command
           ],
         ];
 
-        \file_put_contents($composerJsonFile, \json_encode($composer, \JSON_PRETTY_PRINT|\JSON_UNESCAPED_UNICODE));
+        \file_put_contents($composerJsonFile, \json_encode($composer, \JSON_PRETTY_PRINT | \JSON_UNESCAPED_UNICODE));
 
         return $this;
     }
