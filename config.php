@@ -11,6 +11,6 @@ return [
     // 'Do you want to test this package ? [<fg=yellow>Y/n</fg=yellow>]: ',
     // 'Do you want to use php-cs-fixer format your code ? [<fg=yellow>Y/n</fg=yellow>]:',
   ],
-  'packageDirectory' => __DIR__,
+  'packageDirectory' => '.',
   'stubsDirectory'   => __DIR__ . '/src/Stubs/',
 ];
