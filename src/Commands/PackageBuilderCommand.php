@@ -170,7 +170,7 @@ class PackageBuilderCommand extends Command
           ],
         ];
 
-        \file_put_contents($composerJsonFile, \json_encode($composer, \JSON_PRETTY_PRINT | \JSON_UNESCAPED_UNICODE));
+        \file_put_contents($composerJsonFile, \json_encode($composer, \JSON_UNESCAPED_SLASHES | \JSON_PRETTY_PRINT | \JSON_UNESCAPED_UNICODE));
 
         return $this;
     }
